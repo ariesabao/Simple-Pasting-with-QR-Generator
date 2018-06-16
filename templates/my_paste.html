@@ -1,0 +1,32 @@
+{% extends 'menu.html' %}
+
+{% block body %}
+<table class="table table-stripped">
+    <tr>
+        <th>NAME/TITLE</th>
+        <th>ADDED ON</th>
+        <th>EXPIRES</th>
+        <th>SYNTAX</th>
+
+    </tr>
+     {% for pasted in paste %}
+    <tr>
+
+        <td>{{ pasted.title }}</td>
+        <td>{{ pasted.create_date }}</td>
+        <td>{{ pasted.expiration }}</td>
+        <td>{{ pasted.syntax }}</td>
+        <td><a href="edit_paste/{{pasted.id}}" class="btn btn-outline-warning pull-right">Edit</a></td>
+        <td>
+            <form action="{{ url_for('delete_paste', id=pasted.id) }}" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="Delete" class="btn btn-outline-danger" >
+            </form>
+        </td>
+
+
+    </tr>
+ {%  endfor %}
+</table>
+
+{% endblock %}

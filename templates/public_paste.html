@@ -1,0 +1,30 @@
+{% extends 'menu.html' %}
+
+{% block body %}
+<h1>Trending Paste</h1>
+<div>
+  <h4 class="alert-heading">This page contains the most popular pastes that were created in the lifetime. </h4>
+
+  <table class="table table-stripped">
+    <tr>
+        <th>NAME/TITLE</th>
+        <th>ADDED ON</th>
+        <th>USER</th>
+
+    </tr>
+     {% for pasted in paste %}
+    <tr>
+
+        <td><a href="public_paste/{{pasted.id}}">{{ pasted.title }}</a></td>
+        <td>{{ pasted.create_date }}</td>
+        <td>{{ pasted.author }}</td>
+
+
+
+    </tr>
+ {%  endfor %}
+</table>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'menu.html' %}
+
+{% block body %}
+<h1>Account Settings</h1>
+{% from '_formhelpers.html' import render_field %}
+<form method="POST" action="">
+    <div class="form-group">
+        {{ render_field(form.password, class_="form-control") }}
+    </div>
+    <hr>
+
+    <p><input class="btn btn-primary" type="submit" value="Submit"></p>
+</form>
+{% endblock %}
