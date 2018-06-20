@@ -1,5 +1,5 @@
 # spqr
-Simple pasting with qr generator
+> Simple pasting with qr generator
 
 #Follow me on: 
 - [Facebook](https://www.facebook.com/msangelsz)
