@@ -8,7 +8,7 @@
 - [Youtube](http://www.youtube.com/c/ariesabao)
 
 #To-do:
-- Keep Calm and `Refactor Code`
+- Keep Calm and `Refactor`
 - I have a problem with line `#208` esp the `choices=[]` otherwise still working but its ugly.
 - QR Generator
 - Upgrade Account Roles and Security
